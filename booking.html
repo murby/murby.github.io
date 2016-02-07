@@ -50,7 +50,9 @@
         },
         length: '30 minutes'
       }
-      bookingFields: {
+    })
+
+    calWindow.bookingFields({
           name: {
             placeholder: 'Your full name',
             prefilled: false,
@@ -81,8 +83,7 @@
             required: false,
             locked: false
           }
-      }
-    })
+      })
 
     console.log(calWindow.getConfig());
   </script>

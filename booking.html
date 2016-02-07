@@ -52,7 +52,7 @@
       }
     })
 
-    calWindow.setConfig(
+    calWindow.setConfig({
       bookingFields: {
           name: {
             placeholder: 'Your full name',
@@ -85,7 +85,7 @@
             locked: false
           }
         }
-      );
+      });
 
     calWindow.render();
     console.log(calWindow.getConfig());

@@ -49,6 +49,38 @@
           ]
         },
         length: '30 minutes',
+        bookingFields: {
+          name: {
+            placeholder: 'Your full name',
+            prefilled: false,
+            locked: false
+          },
+          email: {
+            placeholder: 'Your e-mail',
+            prefilled: false,
+            locked: false
+          },
+          comment: {
+            enabled: true,
+            placeholder: 'Write a comment (optional)',
+            prefilled: false,
+            required: false,
+            locked: false
+          },
+          phone: {
+            enabled: true,
+            placeholder: 'Your phone number (optional)',
+            prefilled: false,
+            required: false,
+            locked: false
+          },
+          location: {
+            enabled: true,
+            prefilled: 'https://hangouts.google.com/call/xzm2b44fi3ecartkwc4goyktoaa',
+            required: false,
+            locked: false
+          }
+        }
       }
     })
   </script>

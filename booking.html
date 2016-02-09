@@ -51,44 +51,37 @@
           ]
         },
         length: '30 minutes'
-      }
-    })
-
-    calWindow.setConfig({
+      },
       bookingFields: {
           name: {
-            placeholder: 'Your full name',
-            prefilled: false,
-            locked: false
+            placeholder: 'Your name please'
           },
           email: {
-            placeholder: 'Your e-mail',
-            prefilled: false,
-            locked: false
+            placeholder: 'Your email',
+            disabled: false,
+            required: true
           },
           comment: {
             enabled: true,
             placeholder: 'Write a comment (optional)',
-            prefilled: false,
-            required: false,
-            locked: false
+            required: false
           },
           phone: {
             enabled: true,
-            placeholder: 'Your phone number (optional)',
-            prefilled: false,
+            required: false
+          },
+          voip: {
+            enabled: false,
             required: false,
-            locked: false
+            disabled: true
           },
           location: {
             enabled: true,
-            prefilled: 'https://hangouts.google.com/call/xzm2b44fi3ecartkwc4goyktoaa',
-            required: false,
+            placeholder: 'https://hangouts.google.com/call/xzm2b44fi3ecartkwc4goyktoaa',
             locked: false
           }
         }
-      });
-    calWindow.render();
+    });
     console.log(calWindow.getConfig());
   </script>
 </div>

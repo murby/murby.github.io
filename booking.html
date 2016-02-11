@@ -36,14 +36,14 @@
     calWindow.init({
       name: 'Richard Murby',
       email: 'richard@devpost.com',
-      apiToken: 'lU9vtTdB0wwNx05upplPUuSoDfKxGE3z',
+      apiToken: 'oe7hGgD4JRIpcfMYn4sZQ5eVkiEY4tub',
       calendar: '257b98a3-2b9a-424b-b9d8-3f659a32edbd',
       avatar: 'https://lh3.googleusercontent.com/-TpHaw2U_oWk/AAAAAAAAAAI/AAAAAAAAAjg/uQEzllAoVRs/photo.jpg',
       timekitFindTime: {
         filters: {
           and: [
             {
-              business_hours: { }
+              specific_time: {start: 09:30, end: 18:00}
             },
             {
               exclude_weekend: { }
@@ -52,7 +52,7 @@
         },
         length: '30 minutes'
       },
-      /* bookingFields: {
+      bookingFields: {
           name: {
             placeholder: 'Your name please'
           },
@@ -80,7 +80,7 @@
             placeholder: 'https://hangouts.google.com/call/xzm2b44fi3ecartkwc4goyktoaa',
             locked: false
           }
-        } */
+        }
     });
     console.log(calWindow.getConfig());
   </script>

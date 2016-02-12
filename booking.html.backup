@@ -10,9 +10,7 @@
   </head>
 
   <body>
-
-<!-- making a test change test 3-->
-
+    
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
@@ -36,51 +34,59 @@
     calWindow.init({
       name: 'Richard Murby',
       email: 'richard@devpost.com',
-      apiToken: 'oe7hGgD4JRIpcfMYn4sZQ5eVkiEY4tub',
+      apiToken: 'lU9vtTdB0wwNx05upplPUuSoDfKxGE3z',
       calendar: '257b98a3-2b9a-424b-b9d8-3f659a32edbd',
       avatar: 'https://lh3.googleusercontent.com/-TpHaw2U_oWk/AAAAAAAAAAI/AAAAAAAAAjg/uQEzllAoVRs/photo.jpg',
       timekitFindTime: {
         filters: {
           and: [
-            { "specific_time": {"start": 10, "end": 18}},
+            {
+              business_hours: { }
+            },
             {
               exclude_weekend: { }
             }
           ]
         },
         length: '30 minutes'
-      },
+      }
+    })
+
+    calWindow.setConfig({
       bookingFields: {
           name: {
-            placeholder: 'Your name please'
+            placeholder: 'Your full name',
+            prefilled: false,
+            locked: false
           },
           email: {
-            placeholder: 'Your email',
-            disabled: false,
-            required: true
+            placeholder: 'Your e-mail',
+            prefilled: false,
+            locked: false
           },
           comment: {
             enabled: true,
             placeholder: 'Write a comment (optional)',
-            required: false
+            prefilled: false,
+            required: false,
+            locked: false
           },
           phone: {
             enabled: true,
-            required: false
-          },
-          voip: {
-            enabled: false,
+            placeholder: 'Your phone number (optional)',
+            prefilled: false,
             required: false,
-            disabled: true
+            locked: false
           },
           location: {
             enabled: true,
             prefilled: 'https://hangouts.google.com/call/xzm2b44fi3ecartkwc4goyktoaa',
-            locked: false,
-            required: false
+            required: false,
+            locked: false
           }
         }
-    });
+      });
+    calWindow.render();
     console.log(calWindow.getConfig());
   </script>
 </div>
